@@ -2,43 +2,73 @@
 
 <div align="center">
 
-A **native macOS application** wrapper for DeepSeek AI chat. Lightweight (~400KB) with native window management and system integration.
+**Turn DeepSeek AI into a native macOS application** - Clean, fast, and lightweight wrapper for the best AI chat experience.
 
 [![Swift Version](https://img.shields.io/badge/swift-5.9+-orange.svg)](https://swift.org)
 [![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)]()
 [![Size](https://img.shields.io/badge/size-~400KB-brightgreen.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
+**⭐ Star this repo to support native macOS AI apps!**
+
 </div>
 
-## 🎯 Want DeepSeek AI as a native macOS app?
+## 🎯 The Best Way to Use DeepSeek AI on macOS
 
-Here's the situation: You love DeepSeek AI, but opening it in a browser feels... clunky. Tabs get lost, windows get buried, and it just doesn't feel like part of your Mac.
+**Stop opening DeepSeek AI in your browser!** Experience DeepSeek's powerful AI chat as a real, native macOS application.
 
-**DeepSeek Desktop App** solves this - it wraps the web version in a beautiful, native macOS app:
+Whether you're a **developer**, **researcher**, **student**, or **AI enthusiast** - this app transforms your DeepSeek experience into something that feels truly native to your Mac.
 
-- **Feels native** - proper macOS window, dock integration, standard menus
-- **Tiny footprint** - just 264KB, not the bloat of Electron apps
-- **Smart browsing** - DeepSeek links stay in the app, everything else opens in your browser
-- **Login stays** - you stay logged in, even after quitting and reopening
-- **Clean design** - minimal, borderless, just pure AI conversation
+### Why DeepSeek Desktop App?
 
-No setup, no configuration, no bloat. Just double-click and start chatting.
+- **🚀 Native macOS Experience** - Proper window management, dock integration, and system menus
+- **⚡ Blazing Fast** - Only 264KB, not the heavy Electron bloat of other AI apps
+- **🎯 Smart Browsing** - DeepSeek links stay in-app, everything else opens in your browser
+- **🔐 Persistent Login** - Stay logged in across sessions, no repeated authentication
+- **🎨 Minimal Design** - Clean, borderless interface focused on pure AI conversation
+- **🆓 Completely Free** - Open source, no ads, no tracking, no hidden costs
+
+### Perfect For
+
+- 💬 **Daily AI conversations** with DeepSeek's advanced language model
+- 📚 **Research and learning** with instant AI assistance
+- 💻 **Development work** with code generation and debugging help
+- ✍️ **Content creation** with AI-powered writing assistance
+- 🧠 **Brainstorming** and creative thinking sessions
 
 ## 📥 Download & Install
 
-Just download and drag to Applications:
+**Get DeepSeek Desktop in 3 simple steps:**
 
-[📥 Download DeepSeek.dmg](DeepSeek-1.0.0.dmg) *(264KB)*
+[📥 **Download DeepSeek.dmg**](DeepSeek-1.0.0.dmg) *(264KB)*
 
-**Three simple steps:**
-1. Click the download link above
-2. Open the `.dmg` file
-3. Drag DeepSeek to your Applications folder
+1. Click the download button above
+2. Open the downloaded `.dmg` file
+3. Drag **DeepSeek** to your **Applications** folder
 
-**First launch?** Right-click the app and select "Open" (macOS security thing).
+**First time launching?** Right-click the app and select "Open" (macOS security requirement).
 
-Done. Now you've got DeepSeek as a proper native app in your dock.
+That's it! Now you have DeepSeek AI as a proper native app in your dock.
+
+## ⚠️ Disclaimer
+
+**This application is a web browser wrapper** that provides a native macOS interface for DeepSeek AI's official web service at chat.deepseek.com.
+
+**Important Notes:**
+- This app **does not provide** AI models, AI services, or any computational resources
+- All AI processing, content generation, and services are provided exclusively by DeepSeek (deepseek.com)
+- This application simply renders DeepSeek's official website in a native macOS window
+- Users must have their own DeepSeek account and comply with DeepSeek's terms of service
+- The developer assumes no responsibility for the AI content, accuracy, or availability of DeepSeek's services
+- Any issues with AI functionality, content policies, or service availability should be directed to DeepSeek support
+
+**Technical Details:**
+- This is a standalone client application using Apple's WebKit framework
+- No data is collected, stored, or processed by this application
+- All communications go directly to DeepSeek's official servers
+- The application maintains no user data, AI responses, or conversation history locally
+
+By using this application, you acknowledge that you understand and agree that this is merely a user interface wrapper for DeepSeek's official web service and not an AI service provider.
 
 ---
 
@@ -61,26 +91,19 @@ Done. Now you've got DeepSeek as a proper native app in your dock.
 - **🍎 Native Menus** - Standard macOS menus with keyboard shortcuts
 - **🐳 Dock Integration** - App stays in Dock, click to reopen window
 
-## 🚀 Installation
+## ⌨️ Keyboard Shortcuts
 
-### Quick Install
-
-1. Download `DeepSeek.app` from [Releases](https://github.com/tahoeliu/DeepSeek-App/releases)
-2. Drag `DeepSeek.app` to your **Applications** folder
-3. Launch the app (may need to right-click → Open on first run)
-
-### Security Note
-
-Since this is built locally without a paid developer account, you might see a Gatekeeper warning:
-
-```bash
-# Option 1: Right-click → Open (recommended)
-# Option 2: Remove quarantine via command line
-xattr -dr com.apple.quarantine ~/Applications/DeepSeek.app
-open ~/Applications/DeepSeek.app
-```
-
-The app is **ad-hoc signed** (`codesign --sign -`) and safe to use.
+| Shortcut | Action |
+|----------|--------|
+| `⌘ + R` | Refresh page |
+| `⌘ + [` | Go back |
+| `⌘ + ]` | Go forward |
+| `⌘ + ⇧ + H` | Go to home |
+| `⌘ + B` | Open in browser |
+| `⌘ + ⇧ + L` | Copy URL |
+| `⌘ + M` | Minimize window |
+| `⌃ + ⌘ + F` | Fullscreen |
+| `⌘ + Q` | Quit app |
 
 ## 🌏 Region Switching
 
@@ -97,20 +120,6 @@ Use the **Region** menu to switch:
 
 > **Pro Tip**: If you have an international email account, connect to a VPN/HK/TW node first, then select "International". Once logged in, your session persists even on mainland networks!
 
-## ⌨️ Keyboard Shortcuts
-
-| Shortcut | Action |
-|----------|--------|
-| `⌘ + R` | Refresh page |
-| `⌘ + [` | Go back |
-| `⌘ + ]` | Go forward |
-| `⌘ + ⇧ + H` | Go to home |
-| `⌘ + B` | Open in browser |
-| `⌘ + ⇧ + L` | Copy URL |
-| `⌘ + M` | Minimize window |
-| `⌃ + ⌘ + F` | Fullscreen |
-| `⌘ + Q` | Quit app |
-
 ## 🛠️ Tech Stack
 
 - **Swift 5.9+** - Core application logic
@@ -118,6 +127,42 @@ Use the **Region** menu to switch:
 - **WebKit** - Web rendering engine
 - **WKWebView** - Persistent data store for login state
 - **No external dependencies** - Just Swift stdlib + system frameworks
+
+## 🔧 Development
+
+### Build from Source
+
+```bash
+# Clone the repository
+git clone https://github.com/tahoeliu/DeepSeek-App.git
+cd DeepSeek-App
+
+# Build the app
+./build.sh
+
+# The built app will be in ./DeepSeek.app
+```
+
+### Prerequisites
+
+- macOS 10.15 or later
+- Xcode Command Line Tools (`xcode-select --install`)
+- Swift 5.9+ (included with macOS)
+
+### Customization
+
+**Change URL:** Edit `Sources/main.swift`:
+```swift
+static let homeURL = URL(string: "https://chat.deepseek.com/")!
+```
+
+**Change Icon:** Replace `Resources/icon_master.png` and regenerate icons.
+
+**Change Name:** Edit `Resources/Info.plist`:
+```xml
+<key>CFBundleDisplayName</key>
+<string>YourAppName</string>
+```
 
 ## 📁 Project Structure
 
@@ -136,41 +181,19 @@ DeepSeekApp/
 └── build.sh             # Build script
 ```
 
-## 🔧 Development
+## 🌟 Why Choose DeepSeek Desktop App?
 
-### Prerequisites
+**Compared to browser-based access:**
 
-- macOS 10.15 or later
-- Xcode Command Line Tools (`xcode-select --install`)
-- Swift 5.9+ (included with macOS)
-
-### Building from Source
-
-```bash
-# Clone the repository
-git clone https://github.com/tahoeliu/DeepSeek-App.git
-cd DeepSeek-App
-
-# Build the app
-./build.sh
-
-# The built app will be in ./DeepSeek.app
-```
-
-### Customization
-
-**Change URL:** Edit `Sources/main.swift`:
-```swift
-static let homeURL = URL(string: "https://chat.deepseek.com/")!
-```
-
-**Change Icon:** Replace `Resources/icon_master.png` and regenerate icons.
-
-**Change Name:** Edit `Resources/Info.plist`:
-```xml
-<key>CFBundleDisplayName</key>
-<string>YourAppName</string>
-```
+| Feature | Native App | Browser |
+|---------|------------|---------|
+| Native Window Management | ✅ | ❌ |
+| Dock Integration | ✅ | ❌ |
+| System Menus | ✅ | ❌ |
+| Keyboard Shortcuts | ✅ | ⚠️ Limited |
+| Persistent Login | ✅ | ⚠️ Cookie-dependent |
+| Distraction-Free | ✅ | ❌ |
+| App Badge Notifications | ✅ | ❌ |
 
 ## 🎯 Key Implementation Details
 
@@ -209,6 +232,13 @@ webView.evaluateJavaScript("""
 
 Contributions are welcome! This is a simple, well-structured project perfect for learning Swift + AppKit.
 
+Feel free to:
+
+- 🐛 Report bugs via [GitHub Issues](https://github.com/tahoeliu/DeepSeek-App/issues)
+- 💡 Suggest new features
+- 🔧 Submit pull requests
+- 📖 Improve documentation
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -218,10 +248,25 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [DeepSeek](https://deepseek.com/) - The underlying AI chat service
 - [Apple](https://developer.apple.com/) - AppKit and WebKit frameworks
 
+## 📢 Share DeepSeek Desktop App
+
+If you find this app useful, please consider:
+
+- ⭐ **Star this repository** on GitHub
+- 🔗 **Share it** with friends and colleagues
+- 🐦 **Tweet** about it on social media
+- 📝 **Write a review** if you publish about it
+
+## 🔗 Related Projects
+
+- [ChatGPT Desktop](https://github.com/luyuhuang/chatgpt-desktop) - Native ChatGPT app
+- [Claude Desktop](https://github.com/pionxzh/claude-desktop) - Native Claude app
+- [BingGPT](https://github.com/d2ki3o4/BingGPT) - Bing Chat app
+
 ## 📞 Support
 
-- 📧 Email: [GitHub Issues](https://github.com/tahoeliu/DeepSeek-App/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/tahoeliu/DeepSeek-App/discussions)
+- 📧 **Issues**: [GitHub Issues](https://github.com/tahoeliu/DeepSeek-App/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/tahoeliu/DeepSeek-App/discussions)
 
 ---
 
@@ -229,4 +274,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **For a world worth debugging.**
 
+**Built with Swift for macOS ❤️**
+
+[⬆ Back to Top](#deepseek-desktop-app---native-macos-wrapper)
+
 </div>
+
+---
+
+**Keywords:** DeepSeek AI, macOS app, DeepSeek desktop, native macOS, AI chat, artificial intelligence, DeepSeek wrapper, Swift app, macOS application, free AI app, open source AI, lightweight AI app
