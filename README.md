@@ -50,26 +50,6 @@ Whether you're a **developer**, **researcher**, **student**, or **AI enthusiast*
 
 That's it! Now you have DeepSeek AI as a proper native app in your dock.
 
-## ⚠️ Disclaimer
-
-**This application is a web browser wrapper** that provides a native macOS interface for DeepSeek AI's official web service at chat.deepseek.com.
-
-**Important Notes:**
-- This app **does not provide** AI models, AI services, or any computational resources
-- All AI processing, content generation, and services are provided exclusively by DeepSeek (deepseek.com)
-- This application simply renders DeepSeek's official website in a native macOS window
-- Users must have their own DeepSeek account and comply with DeepSeek's terms of service
-- The developer assumes no responsibility for the AI content, accuracy, or availability of DeepSeek's services
-- Any issues with AI functionality, content policies, or service availability should be directed to DeepSeek support
-
-**Technical Details:**
-- This is a standalone client application using Apple's WebKit framework
-- No data is collected, stored, or processed by this application
-- All communications go directly to DeepSeek's official servers
-- The application maintains no user data, AI responses, or conversation history locally
-
-By using this application, you acknowledge that you understand and agree that this is merely a user interface wrapper for DeepSeek's official web service and not an AI service provider.
-
 ---
 
 <div align="center">
@@ -268,6 +248,25 @@ If you find this app useful, please consider:
 - 📧 **Issues**: [GitHub Issues](https://github.com/tahoeliu/DeepSeek-App/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/tahoeliu/DeepSeek-App/discussions)
 
+## ⚠️ Disclaimer
+
+**This application is a web browser wrapper** that provides a native macOS interface for DeepSeek AI's official web service at chat.deepseek.com.
+
+**Important Notes:**
+- This app **does not provide** AI models, AI services, or any computational resources
+- All AI processing, content generation, and services are provided exclusively by DeepSeek (deepseek.com)
+- This application simply renders DeepSeek's official website in a native macOS window
+- Users must have their own DeepSeek account and comply with DeepSeek's terms of service
+- The developer assumes no responsibility for the AI content, accuracy, or availability of DeepSeek's services
+- Any issues with AI functionality, content policies, or service availability should be directed to DeepSeek support
+
+**Technical Details:**
+- This is a standalone client application using Apple's WebKit framework
+- No data is collected, stored, or processed by this application
+- All communications go directly to DeepSeek's official servers
+- The application maintains no user data, AI responses, or conversation history locally
+
+By using this application, you acknowledge that you understand and agree that this is merely a user interface wrapper for DeepSeek's official web service and not an AI service provider.
 ---
 
 <div align="center">
