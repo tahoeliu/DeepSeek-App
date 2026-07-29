@@ -11,6 +11,45 @@ A **native macOS application** wrapper for DeepSeek AI chat. Lightweight (~400KB
 
 </div>
 
+## 🎯 Want DeepSeek AI as a native macOS app?
+
+Here's the situation: You love DeepSeek AI, but opening it in a browser feels... clunky. Tabs get lost, windows get buried, and it just doesn't feel like part of your Mac.
+
+**DeepSeek Desktop App** solves this - it wraps the web version in a beautiful, native macOS app:
+
+- **Feels native** - proper macOS window, dock integration, standard menus
+- **Tiny footprint** - just 264KB, not the bloat of Electron apps
+- **Smart browsing** - DeepSeek links stay in the app, everything else opens in your browser
+- **Login stays** - you stay logged in, even after quitting and reopening
+- **Clean design** - minimal, borderless, just pure AI conversation
+
+No setup, no configuration, no bloat. Just double-click and start chatting.
+
+## 📥 Download & Install
+
+Just download and drag to Applications:
+
+[📥 Download DeepSeek.dmg](DeepSeek-1.0.0.dmg) *(264KB)*
+
+**Three simple steps:**
+1. Click the download link above
+2. Open the `.dmg` file
+3. Drag DeepSeek to your Applications folder
+
+**First launch?** Right-click the app and select "Open" (macOS security thing).
+
+Done. Now you've got DeepSeek as a proper native app in your dock.
+
+---
+
+<div align="center">
+
+**For the curious minds who refuse to accept the default.**
+
+</div>
+
+---
+
 ## ✨ Features
 
 - **🚀 Native Performance** - Built with AppKit + WKWebView (no Electron, just ~400KB)
@@ -21,14 +60,6 @@ A **native macOS application** wrapper for DeepSeek AI chat. Lightweight (~400KB
 - **🇨🇳 Region Support** - Switch between Chinese/International versions via menu
 - **🍎 Native Menus** - Standard macOS menus with keyboard shortcuts
 - **🐳 Dock Integration** - App stays in Dock, click to reopen window
-
-## 📸 Screenshots
-
-<div align="center">
-
-*Clean, native macOS interface for DeepSeek AI*
-
-</div>
 
 ## 🚀 Installation
 
@@ -196,6 +227,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**Built with Swift for macOS ❤️**
+**For a world worth debugging.**
 
 </div>

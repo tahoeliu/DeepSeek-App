@@ -1,8 +1,10 @@
 # Build artifacts
 Build/
 *.app
-*.dmg
 build/
+
+# Allow DMG files for distribution
+!*.dmg
 
 # Xcode
 DerivedData/
