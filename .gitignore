@@ -3,8 +3,8 @@ Build/
 *.app
 build/
 
-# Allow DMG files for distribution
-!*.dmg
+# DMG distribution files (distribute via GitHub Releases instead)
+*.dmg
 
 # Xcode
 DerivedData/

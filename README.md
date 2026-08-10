@@ -6,7 +6,7 @@
 
 [![Swift Version](https://img.shields.io/badge/swift-5.9+-orange.svg)](https://swift.org)
 [![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)]()
-[![Size](https://img.shields.io/badge/size-~400KB-brightgreen.svg)]()
+[![Size](https://img.shields.io/badge/size-264KB-brightgreen.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 **⭐ Star this repo to support native macOS AI apps!**
@@ -40,7 +40,7 @@ Whether you're a **developer**, **researcher**, **student**, or **AI enthusiast*
 
 **Get DeepSeek Desktop in 3 simple steps:**
 
-[📥 **Download DeepSeek.dmg**](DeepSeek-1.0.0.dmg) *(264KB)*
+[📥 **Download DeepSeek.dmg**](https://github.com/tahoeliu/DeepSeek-App/releases/latest/download/DeepSeek.dmg) *(264KB)*
 
 1. Click the download button above
 2. Open the downloaded `.dmg` file
@@ -62,7 +62,7 @@ That's it! Now you have DeepSeek AI as a proper native app in your dock.
 
 ## ✨ Features
 
-- **🚀 Native Performance** - Built with AppKit + WKWebView (no Electron, just ~400KB)
+- **🚀 Native Performance** - Built with AppKit + WKWebView (no Electron, just 264KB)
 - **🎨 Minimalist Design** - Borderless window with no title text or toolbar buttons
 - **🖱️ Draggable Title Area** - Hidden 48px drag band at window top
 - **🔐 Login Persistence** - Maintains login state across sessions
