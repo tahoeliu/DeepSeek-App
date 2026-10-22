@@ -129,6 +129,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         cfg.defaultWebpagePreferences = WKWebpagePreferences()
 
         let controller = WKUserContentController()
+        controller.addUserScript(makeIMEGuardScript())
         controller.addUserScript(makeLogoHiderScript())
         cfg.userContentController = controller
 
@@ -144,6 +145,71 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             NSWorkspace.shared.open(url)
         }
         self.webView = wv
+    }
+
+    /// Keep IME confirmation keys out of the site's send shortcut without cancelling
+    /// native text commitment. Older WebKit can report isComposing=false on the
+    /// confirming Enter; keyCode 229 is intentionally retained for that case.
+    private func makeIMEGuardScript() -> WKUserScript {
+        let js = """
+        (function(){
+          'use strict';
+          if (location.protocol !== 'https:' || location.hostname !== 'chat.deepseek.com') return;
+          const installed = Symbol.for('ai.deepseek.wrapper.imeGuard.v1');
+          if (window[installed]) return;
+          window[installed] = true;
+          let composingEditor = null;
+          let guardedEnter = null;
+          function editorFor(event) {
+            const target = event.target;
+            if (!(target instanceof Element)) return null;
+            const editor = target.closest('textarea, [contenteditable]');
+            if (!editor || editor.matches(':disabled, [readonly]')) return null;
+            if (editor.tagName === 'TEXTAREA') return editor;
+            return editor.isContentEditable ? editor : null;
+          }
+          function isEnter(event) {
+            return event.key === 'Enter' || event.code === 'Enter' ||
+                   event.code === 'NumpadEnter' || event.keyCode === 13;
+          }
+          window.addEventListener('compositionstart', function(event) {
+            composingEditor = editorFor(event);
+            guardedEnter = null;
+          }, true);
+          window.addEventListener('compositionend', function(event) {
+            if (editorFor(event) === composingEditor) composingEditor = null;
+          }, true);
+          window.addEventListener('keydown', function(event) {
+            const editor = editorFor(event);
+            if (!editor) { guardedEnter = null; return; }
+            if (!isEnter(event)) return;
+            // A fresh physical press must never inherit a missed keyup latch.
+            if (!event.repeat) guardedEnter = null;
+            if (event.isComposing || event.keyCode === 229 ||
+                composingEditor === editor || (event.repeat && guardedEnter === editor)) {
+              guardedEnter = editor;
+              event.stopImmediatePropagation();
+            }
+          }, true);
+          function finishEnter(event) {
+            if (!isEnter(event)) return;
+            const editor = editorFor(event);
+            const guarded = editor && (guardedEnter === editor ||
+              event.isComposing || event.keyCode === 229 || composingEditor === editor);
+            if (event.type === 'keyup') guardedEnter = null;
+            if (guarded) event.stopImmediatePropagation();
+          }
+          window.addEventListener('keypress', finishEnter, true);
+          window.addEventListener('keyup', finishEnter, true);
+          function reset() { composingEditor = null; guardedEnter = null; }
+          window.addEventListener('blur', reset, true);
+          window.addEventListener('pagehide', reset, true);
+          document.addEventListener('visibilitychange', function() {
+            if (document.hidden) reset();
+          }, true);
+        })();
+        """
+        return WKUserScript(source: js, injectionTime: .atDocumentStart, forMainFrameOnly: true)
     }
 
     /// Injects a <style> rule that hides the DeepSeek sidebar logo. We use `!important`
